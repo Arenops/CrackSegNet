@@ -70,10 +70,10 @@ data_gen_args = dict(rotation_range=20,
 
 myGene = trainGenerator(2, 'data/train', 'image', 'mask', data_gen_args, save_to_dir = None)
 
-model_name = 'backbone000.hdf5'
+model_name = 'ImprovedFCN.hdf5'
 print("got unet")
-model = unet3s2('./new_test_model/6Deeplabv3MAX+FL4-256-1.hdf5')
+model = unet3s2('./model/ImprovedFCN.hdf5')
 model_checkpoint = ModelCheckpoint(model_name, monitor='loss', verbose=1, save_best_only=True)
 print('Fitting model...')
-model.fit_generator(myGene, steps_per_epoch=2000, epochs=400, callbacks=[model_checkpoint])
+model.fit_generator(myGene, steps_per_epoch=2000, epochs=40, callbacks=[model_checkpoint])
 print('model saved ...{}'.format(model_name))

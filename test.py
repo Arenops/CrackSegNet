@@ -1,7 +1,7 @@
 from model import *
 import skimage.transform as trans
 
-model_name = 'Deeplabv3MAX+FL4'
+model_name = 'ImprovedFCN'
 model = unet3s2()
 model.load_weights(model_name + '.hdf5')
 test_path="test_imgs"
