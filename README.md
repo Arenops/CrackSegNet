@@ -1,4 +1,4 @@
-# Implementation of deep learning-based crack detection -- Improved FCN, using Keras
+# Implementation of deep learning-based crack detection -- CrackSegNet, using Keras
 
 
 
